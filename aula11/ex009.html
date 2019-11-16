@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionadade</title>
+</head>
+<body>
+    <input type="text" id="txt" name="txt" />
+    <input type ="button" onclick="origem()" value="Aperte">
+    <div id="di">
+        Teste
+    </div>
+
+    <script>
+        //var pais = window.document.querySelector('input#txt')
+        var pais = window.document.querySelector('input#txt')
+        var div = document.querySelector('div#di')
+       
+
+        function origem(){
+
+            console.log(pais.value)
+            var tx = pais.value
+
+            div.innerHTML = `Vivendo em ${tx}`
+            if(pais.value == 'Brasil'){
+                div.innerHTML += `<p>Você é Brasileiro</p>`
+            }else{
+                div.innerHTML +=  `<p>Você é estrangeiro</p>`
+            }
+
+        }
+        
+     
+    </script>
+    
+</body>
+</html>
